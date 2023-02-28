@@ -1,0 +1,121 @@
+.header {
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--main-color);
+}
+
+.header__navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__navbar--item-link,
+.header__navbar--item {
+    margin: 0 8px;
+}
+
+
+.header__navbar-list {
+    list-style: none;
+    padding-left: 0;
+    margin: auto 0;
+}
+
+.header__navbar-item,
+.header__navbar--item-link {
+    display: inline-block;
+    font-size: 1.8rem;
+    color: var(--white-color);
+    text-decoration: none;
+    font-weight: 400;
+}
+
+.header__navbar-item,
+.header__nabar-icon-link,
+.header__navbar--item-link {
+    display: inline-flex;
+    align-items: center;
+}
+
+
+.header__navbar-brand {
+    font-size: 3rem;
+    font-weight: 500;
+    color: var(--div-color);
+    margin-right: 50px;
+    text-decoration: none;
+}
+
+.header__navbar-brand:hover,
+.header__navbar--item-link:hover,
+.header__navbar-icon:hover {
+     text-decoration: none;
+     color: rgba(255, 255, 255, 0.7);
+     cursor: pointer;
+}
+
+.header__navbar--searchbox-btn:hover {
+    border: none;
+    opacity: 0.6;
+}
+
+.header__navbar--searchbox-btn:active {
+    outline: none;
+    opacity: 0.8
+}
+
+.header__nabar-icon-link {
+    color: var(--white-color);
+    text-decoration: none;
+}
+
+
+.header__navbar-icon {
+    font-size: 1.6rem;
+    color: var(--white-color);
+    opacity: 0.8;
+    margin: 0 4px;
+}
+
+.header__navbar-searchbox {
+    background-color: var(--white-color);
+    position: relative;
+    width: 40%;
+    height: 40px;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.header__navbar--searchbox-input {
+    border: 0;
+    outline: none;
+    background-color: transparent;
+    height: 100%;
+    width: 100%;
+    padding: 0px;
+    padding-left: 20px;
+    color: var(--text-color);
+}
+
+    .header__navbar--searchbox-input::placeholder {
+        font-size: 1.4rem;
+        line-height: 30px;
+        transform: translateY(-10%);
+    }
+
+.header__navbar--searchbox-btn {
+    position: absolute;
+    right: 0;
+    top: 0;
+    border: none;
+    height: 40px;
+    width: 100px;
+    color: var(--text-color);
+    background-color: #D7D7D6;
+    border-bottom-right-radius: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}

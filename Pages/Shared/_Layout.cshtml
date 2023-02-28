@@ -1,0 +1,69 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - CheeseBurger</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/CheeseBurger.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/base.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/header-user.css" asp-append-version="true" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <nav class="header__navbar">
+                <a href="#" class="header__navbar-brand">CheeseBurger</a>
+                <ul class="header__navbar-list">
+                    <li class="header__navbar-item">
+                        <a asp-area="" asp-page="#" class="header__navbar--item-link">Trang chủ</a>
+                        <a asp-area="" asp-page="#" class="header__navbar--item-link">Thực đơn</a>
+                    </li>
+                </ul>
+
+                <form class="header__navbar-searchbox header__navbar-item">
+                    <input class="header__navbar--searchbox-input" type="text" placeholder="Nhập món ăn cần tìm">
+                    <button type="submit" class="header__navbar--searchbox-btn">
+                        <i style="color: black;" class="header__navbar-icon fas fa-magnifying-glass"></i>
+                    </button>
+                </form>
+
+                <ul class="header__navbar-list header__navbar-list--icon">
+                    <li class="header__navbar-item">
+                        <a asp-area="" asp-page="#" class="header__navbar--item-link">
+                            <i class="header__navbar-icon fas fa-cart-shopping"></i>
+                            Giỏ hàng
+                        </a>
+                    </li>
+                    <li class="header__navbar-item">
+                        <a asp-area="" asp-page="#" class="header__navbar--item-link">
+                            <i class="header__navbar-icon fas fa-user"></i>
+                            Tài khoản
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2023 - CheeseBurger - <a asp-area="" asp-page="/Privacy">Privacy</a>
+        </div>
+    </footer>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
